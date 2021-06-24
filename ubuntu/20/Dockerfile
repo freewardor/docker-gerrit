@@ -22,7 +22,7 @@ RUN apt-get -y install gerrit=3.4.0-1 && \
     bash -c 'rm -f /var/gerrit/etc/{ssh,secure}* && rm -Rf /var/gerrit/{static,index,logs,data,index,cache,git,db,tmp}/*' && \
     chown -R gerrit:gerrit /var/gerrit
 
-USER gerrit
+USER root
 
 ENV CANONICAL_WEB_URL=
 ENV HTTPD_LISTEN_URL=
